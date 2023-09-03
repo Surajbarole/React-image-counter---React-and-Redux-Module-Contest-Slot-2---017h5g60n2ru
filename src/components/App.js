@@ -2,9 +2,15 @@ import React, { useState } from 'react'
 import '../styles/App.css';
 import star from '../star.png'
 const App = () => {
-  return (
+  function StartCount(){
+    const [size ,setSize]=useState(302);
+    const increase=()=>{
+      setSize(size+2)
+    }
+  }
+  {  return (
     <div id="main">
-      <img src={star}  height="300px" width="300px" />
+      <img src={star}  onClick={increase} height="300px" width="300px" />
     </div>
   )
 }
